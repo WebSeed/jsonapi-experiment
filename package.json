@@ -1,0 +1,19 @@
+{
+  "name": "jsonapi-experiment",
+  "version": "1.0.0",
+  "description": "JSON API Experiment",
+  "main": "lib/server.js",
+  "scripts": {
+    "start": "nodemon ."
+  },
+  "repository": "git@github.com:WebSeed/jsonapi-experiment.git",
+  "author": "Will Bamford <w.bamford@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "jsonapi-server": "^3.0.0",
+    "jsonapi-store-relationaldb": "^1.2.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
