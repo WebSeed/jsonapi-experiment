@@ -4,16 +4,23 @@
   "description": "JSON API Experiment",
   "main": "lib/server.js",
   "scripts": {
-    "start": "nodemon ."
+    "start": "nodemon .",
+    "test": "eslint lib --ext .js",
+    "fix": "eslint lib --ext .js --fix",
+    "debug": "DEBUG=jsonApi:store:* node ."
   },
   "repository": "git@github.com:WebSeed/jsonapi-experiment.git",
   "author": "Will Bamford <w.bamford@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
     "jsonapi-server": "^3.0.0",
-    "jsonapi-store-relationaldb": "^1.2.8"
+    "jsonapi-store-relationaldb": "^1.2.8",
+    "mysql": "^2.13.0"
   },
   "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0",
     "nodemon": "^1.11.0"
   }
 }
