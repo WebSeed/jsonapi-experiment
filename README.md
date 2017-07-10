@@ -10,6 +10,37 @@ Doesn't couple to any one ORM solution.
 
 > Think of `resources` as your `routes`
 
+### Relationships
+
+See https://github.com/holidayextras/jsonapi-server/blob/master/documentation/resources.md#attributes
+
+```js
+Joi.one('photos')
+```
+
+```js
+Joi.belongsToOne({
+  resource: 'articles',
+  as: 'comments'
+})
+```
+
+```js
+api.Joi.many('photos')
+```
+
+```js
+api.Joi.belongsToMany({
+  resource: 'articles',
+  as: 'comments'
+})
+```
+
+## Includes
+
+Example:
+http://localhost:16006/spaces?include=spaceAssignments
+
 ## Handlers
 
 > Think of `handlers` as your `controllers`
@@ -36,6 +67,13 @@ See [http://localhost:16006/swagger.json](http://localhost:16006/swagger.json)
 * Transactional queries
 
 > ...database migrations are left as an exercise for the user
+
+## TODO
+
+* Digest https://github.com/holidayextras/jsonapi-server/blob/master/documentation/foreign-relations.md
+* Looks at [Search Params](https://github.com/holidayextras/jsonapi-server/blob/master/documentation/resources.md#searchparams)
+* [Chaining handlers](https://github.com/holidayextras/jsonapi-server/blob/master/documentation/chain-handler.md#chaining-handlers-together-with-the-chainhandler)
+* Look into validation
 
 ## Links
 
